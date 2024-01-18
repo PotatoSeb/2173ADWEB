@@ -1,0 +1,54 @@
+<h1>THIS IS THE HOME PAGE</h1>
+<hr>
+<h2>My name is Sebastian Pamintuan and This is the Home page</h2>
+
+<img src={{imageUrl}} alt="Picture ni Seb" [width]="imageW" [height]="imageW"/>
+
+<hr>
+<div class="container"> 
+    <table class="table table-striped table-bordered" border = "1"> 
+        <thead> 
+            <tr> 
+                <th>Language Used</th> 
+                <th>Skills</th> 
+                <th>Experience</th> 
+            </tr> 
+        </thead> 
+            <tbody> 
+                <tr *ngFor="let user of staff"> 
+                <td>{{user.firstName}} {{user.lastName}}</td> 
+                <td>{{user.email}}</td> 
+                <td>{{user.role}}</td> 
+            </tr> 
+            </tbody> 
+    </table> 
+</div>
+
+<hr>
+<h2> I do commisions and you can avail my service</h2>
+<div class="container px-4 px-lg-5 mt-5">
+    <div class="d-flex justify-content-center">
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4">
+        <!-- Use *ngFor to iterate over your product items -->
+        <div class="col mb-5" *ngFor="let product of products">
+          <div class="card h-100">
+            <!-- Product image-->
+            <img class="card-img-top" src="{{ product.imageUrl }}" alt="Product Image" />
+            <!-- Product details-->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder">{{ product.name }}</h5>
+                <!-- Product price-->
+                {{ product.price }}
+              </div>
+            </div>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
